@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/go-kit/kit/log"
+	"github.com/AshleyDumaine/kit/log"
 )
 
 // Middleware describes a service (as opposed to endpoint) middleware.

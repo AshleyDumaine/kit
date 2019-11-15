@@ -3,11 +3,11 @@ package handling
 import (
 	"time"
 
-	"github.com/go-kit/kit/metrics"
+	"github.com/AshleyDumaine/kit/metrics"
 
-	"github.com/go-kit/kit/examples/shipping/cargo"
-	"github.com/go-kit/kit/examples/shipping/location"
-	"github.com/go-kit/kit/examples/shipping/voyage"
+	"github.com/AshleyDumaine/kit/examples/shipping/cargo"
+	"github.com/AshleyDumaine/kit/examples/shipping/location"
+	"github.com/AshleyDumaine/kit/examples/shipping/voyage"
 )
 
 type instrumentingService struct {

@@ -6,7 +6,7 @@ import (
 
 	"github.com/hudl/fargo"
 
-	"github.com/go-kit/kit/sd"
+	"github.com/AshleyDumaine/kit/sd"
 )
 
 var _ sd.Instancer = (*Instancer)(nil) // API check

@@ -14,10 +14,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/metrics"
-	"github.com/go-kit/kit/metrics/generic"
-	"github.com/go-kit/kit/util/conn"
+	"github.com/AshleyDumaine/kit/log"
+	"github.com/AshleyDumaine/kit/metrics"
+	"github.com/AshleyDumaine/kit/metrics/generic"
+	"github.com/AshleyDumaine/kit/util/conn"
 )
 
 // Graphite receives metrics observations and forwards them to a Graphite server.

@@ -4,9 +4,9 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/go-kit/kit/endpoint"
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/transport"
+	"github.com/AshleyDumaine/kit/endpoint"
+	"github.com/AshleyDumaine/kit/log"
+	"github.com/AshleyDumaine/kit/transport"
 
 	"github.com/nats-io/nats.go"
 )

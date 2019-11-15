@@ -12,18 +12,18 @@ import (
 	"github.com/sony/gobreaker"
 	"golang.org/x/time/rate"
 
-	"github.com/go-kit/kit/circuitbreaker"
-	"github.com/go-kit/kit/endpoint"
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/ratelimit"
-	"github.com/go-kit/kit/tracing/opentracing"
-	"github.com/go-kit/kit/tracing/zipkin"
-	"github.com/go-kit/kit/transport"
-	grpctransport "github.com/go-kit/kit/transport/grpc"
+	"github.com/AshleyDumaine/kit/circuitbreaker"
+	"github.com/AshleyDumaine/kit/endpoint"
+	"github.com/AshleyDumaine/kit/log"
+	"github.com/AshleyDumaine/kit/ratelimit"
+	"github.com/AshleyDumaine/kit/tracing/opentracing"
+	"github.com/AshleyDumaine/kit/tracing/zipkin"
+	"github.com/AshleyDumaine/kit/transport"
+	grpctransport "github.com/AshleyDumaine/kit/transport/grpc"
 
-	"github.com/go-kit/kit/examples/addsvc/pb"
-	"github.com/go-kit/kit/examples/addsvc/pkg/addendpoint"
-	"github.com/go-kit/kit/examples/addsvc/pkg/addservice"
+	"github.com/AshleyDumaine/kit/examples/addsvc/pb"
+	"github.com/AshleyDumaine/kit/examples/addsvc/pkg/addendpoint"
+	"github.com/AshleyDumaine/kit/examples/addsvc/pkg/addservice"
 )
 
 type grpcServer struct {

@@ -6,9 +6,9 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/go-kit/kit/endpoint"
+	"github.com/AshleyDumaine/kit/endpoint"
 
-	httptransport "github.com/go-kit/kit/transport/http"
+	httptransport "github.com/AshleyDumaine/kit/transport/http"
 )
 
 type Profile struct {

@@ -13,17 +13,17 @@ import (
 	stdprometheus "github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"github.com/go-kit/kit/log"
-	kitprometheus "github.com/go-kit/kit/metrics/prometheus"
+	"github.com/AshleyDumaine/kit/log"
+	kitprometheus "github.com/AshleyDumaine/kit/metrics/prometheus"
 
-	"github.com/go-kit/kit/examples/shipping/booking"
-	"github.com/go-kit/kit/examples/shipping/cargo"
-	"github.com/go-kit/kit/examples/shipping/handling"
-	"github.com/go-kit/kit/examples/shipping/inmem"
-	"github.com/go-kit/kit/examples/shipping/inspection"
-	"github.com/go-kit/kit/examples/shipping/location"
-	"github.com/go-kit/kit/examples/shipping/routing"
-	"github.com/go-kit/kit/examples/shipping/tracking"
+	"github.com/AshleyDumaine/kit/examples/shipping/booking"
+	"github.com/AshleyDumaine/kit/examples/shipping/cargo"
+	"github.com/AshleyDumaine/kit/examples/shipping/handling"
+	"github.com/AshleyDumaine/kit/examples/shipping/inmem"
+	"github.com/AshleyDumaine/kit/examples/shipping/inspection"
+	"github.com/AshleyDumaine/kit/examples/shipping/location"
+	"github.com/AshleyDumaine/kit/examples/shipping/routing"
+	"github.com/AshleyDumaine/kit/examples/shipping/tracking"
 )
 
 const (

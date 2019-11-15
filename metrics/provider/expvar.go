@@ -1,8 +1,8 @@
 package provider
 
 import (
-	"github.com/go-kit/kit/metrics"
-	"github.com/go-kit/kit/metrics/expvar"
+	"github.com/AshleyDumaine/kit/metrics"
+	"github.com/AshleyDumaine/kit/metrics/expvar"
 )
 
 type expvarProvider struct{}

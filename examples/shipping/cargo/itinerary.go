@@ -3,8 +3,8 @@ package cargo
 import (
 	"time"
 
-	"github.com/go-kit/kit/examples/shipping/location"
-	"github.com/go-kit/kit/examples/shipping/voyage"
+	"github.com/AshleyDumaine/kit/examples/shipping/location"
+	"github.com/AshleyDumaine/kit/examples/shipping/voyage"
 )
 
 // Leg describes the transportation between two locations on a voyage.

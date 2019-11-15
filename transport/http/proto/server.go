@@ -5,7 +5,7 @@ import (
 	"errors"
 	"net/http"
 
-	httptransport "github.com/go-kit/kit/transport/http"
+	httptransport "github.com/AshleyDumaine/kit/transport/http"
 	"github.com/golang/protobuf/proto"
 )
 

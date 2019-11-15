@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	httptransport "github.com/go-kit/kit/transport/http"
+	httptransport "github.com/AshleyDumaine/kit/transport/http"
 )
 
 type TestResponse struct {

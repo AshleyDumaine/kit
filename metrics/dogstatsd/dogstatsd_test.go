@@ -3,8 +3,8 @@ package dogstatsd
 import (
 	"testing"
 
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/metrics/teststat"
+	"github.com/AshleyDumaine/kit/log"
+	"github.com/AshleyDumaine/kit/metrics/teststat"
 )
 
 func TestCounter(t *testing.T) {

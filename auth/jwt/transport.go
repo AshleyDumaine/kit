@@ -8,8 +8,8 @@ import (
 
 	"google.golang.org/grpc/metadata"
 
-	"github.com/go-kit/kit/transport/grpc"
-	"github.com/go-kit/kit/transport/http"
+	"github.com/AshleyDumaine/kit/transport/grpc"
+	"github.com/AshleyDumaine/kit/transport/http"
 )
 
 const (

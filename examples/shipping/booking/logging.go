@@ -3,10 +3,10 @@ package booking
 import (
 	"time"
 
-	"github.com/go-kit/kit/log"
+	"github.com/AshleyDumaine/kit/log"
 
-	"github.com/go-kit/kit/examples/shipping/cargo"
-	"github.com/go-kit/kit/examples/shipping/location"
+	"github.com/AshleyDumaine/kit/examples/shipping/cargo"
+	"github.com/AshleyDumaine/kit/examples/shipping/location"
 )
 
 type loggingService struct {

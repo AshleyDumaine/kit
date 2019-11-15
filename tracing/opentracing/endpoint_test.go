@@ -7,8 +7,8 @@ import (
 	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/mocktracer"
 
-	"github.com/go-kit/kit/endpoint"
-	kitot "github.com/go-kit/kit/tracing/opentracing"
+	"github.com/AshleyDumaine/kit/endpoint"
+	kitot "github.com/AshleyDumaine/kit/tracing/opentracing"
 )
 
 func TestTraceServer(t *testing.T) {

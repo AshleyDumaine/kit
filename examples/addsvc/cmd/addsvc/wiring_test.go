@@ -10,12 +10,12 @@ import (
 	"github.com/opentracing/opentracing-go"
 	zipkin "github.com/openzipkin/zipkin-go"
 
-	"github.com/go-kit/kit/log"
-	"github.com/go-kit/kit/metrics/discard"
+	"github.com/AshleyDumaine/kit/log"
+	"github.com/AshleyDumaine/kit/metrics/discard"
 
-	"github.com/go-kit/kit/examples/addsvc/pkg/addendpoint"
-	"github.com/go-kit/kit/examples/addsvc/pkg/addservice"
-	"github.com/go-kit/kit/examples/addsvc/pkg/addtransport"
+	"github.com/AshleyDumaine/kit/examples/addsvc/pkg/addendpoint"
+	"github.com/AshleyDumaine/kit/examples/addsvc/pkg/addservice"
+	"github.com/AshleyDumaine/kit/examples/addsvc/pkg/addtransport"
 )
 
 func TestHTTP(t *testing.T) {

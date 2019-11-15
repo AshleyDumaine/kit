@@ -6,8 +6,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/go-kit/kit/endpoint"
-	httptransport "github.com/go-kit/kit/transport/http"
+	"github.com/AshleyDumaine/kit/endpoint"
+	httptransport "github.com/AshleyDumaine/kit/transport/http"
 )
 
 type ExampleService struct {

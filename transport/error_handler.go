@@ -3,7 +3,7 @@ package transport
 import (
 	"context"
 
-	"github.com/go-kit/kit/log"
+	"github.com/AshleyDumaine/kit/log"
 )
 
 // ErrorHandler receives a transport error to be processed for diagnostic purposes.
