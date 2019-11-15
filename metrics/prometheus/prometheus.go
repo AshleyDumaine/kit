@@ -32,6 +32,11 @@ func NewCounter(cv *prometheus.CounterVec) *Counter {
 	}
 }
 
+// Delete unregisters the Prometheus CounterVec
+func (c *Counter) Delete() bool {
+	return prometheus.Unregister(c.cv)
+}
+
 // With implements Counter.
 func (c *Counter) With(labelValues ...string) metrics.Counter {
 	return &Counter{
@@ -64,6 +69,11 @@ func NewGauge(gv *prometheus.GaugeVec) *Gauge {
 	return &Gauge{
 		gv: gv,
 	}
+}
+
+// Delete unregisters the Prometheus GaugeVec
+func (g *Gauge) Delete() bool {
+	return prometheus.Unregister(g.gv)
 }
 
 // With implements Gauge.
@@ -107,6 +117,11 @@ func NewSummary(sv *prometheus.SummaryVec) *Summary {
 	}
 }
 
+// Delete unregisters the Prometheus SummaryVec
+func (s *Summary) Delete() bool {
+	return prometheus.Unregister(s.sv)
+}
+
 // With implements Histogram.
 func (s *Summary) With(labelValues ...string) metrics.Histogram {
 	return &Summary{
@@ -141,6 +156,11 @@ func NewHistogram(hv *prometheus.HistogramVec) *Histogram {
 	return &Histogram{
 		hv: hv,
 	}
+}
+
+// Delete unregisters the Prometheus HistorgramVec
+func (h *Histogram) Delete() bool {
+	return prometheus.Unregister(h.hv)
 }
 
 // With implements Histogram.
