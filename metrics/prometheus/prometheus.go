@@ -21,7 +21,7 @@ type Counter struct {
 // and returns a usable Counter object.
 func NewCounterFrom(opts prometheus.CounterOpts, labelNames []string) *Counter {
 	cv := prometheus.NewCounterVec(opts, labelNames)
-	prometheus.MustRegister(cv)
+	prometheus.Register(cv)
 	return NewCounter(cv)
 }
 
@@ -30,11 +30,6 @@ func NewCounter(cv *prometheus.CounterVec) *Counter {
 	return &Counter{
 		cv: cv,
 	}
-}
-
-// Delete unregisters the Prometheus CounterVec
-func (c *Counter) Delete() bool {
-	return prometheus.Unregister(c.cv)
 }
 
 // With implements Counter.
@@ -60,7 +55,7 @@ type Gauge struct {
 // and returns a usable Gauge object.
 func NewGaugeFrom(opts prometheus.GaugeOpts, labelNames []string) *Gauge {
 	gv := prometheus.NewGaugeVec(opts, labelNames)
-	prometheus.MustRegister(gv)
+	prometheus.Register(gv)
 	return NewGauge(gv)
 }
 
@@ -69,11 +64,6 @@ func NewGauge(gv *prometheus.GaugeVec) *Gauge {
 	return &Gauge{
 		gv: gv,
 	}
-}
-
-// Delete unregisters the Prometheus GaugeVec
-func (g *Gauge) Delete() bool {
-	return prometheus.Unregister(g.gv)
 }
 
 // With implements Gauge.
@@ -106,7 +96,7 @@ type Summary struct {
 // and returns a usable Summary object.
 func NewSummaryFrom(opts prometheus.SummaryOpts, labelNames []string) *Summary {
 	sv := prometheus.NewSummaryVec(opts, labelNames)
-	prometheus.MustRegister(sv)
+	prometheus.Register(sv)
 	return NewSummary(sv)
 }
 
@@ -115,11 +105,6 @@ func NewSummary(sv *prometheus.SummaryVec) *Summary {
 	return &Summary{
 		sv: sv,
 	}
-}
-
-// Delete unregisters the Prometheus SummaryVec
-func (s *Summary) Delete() bool {
-	return prometheus.Unregister(s.sv)
 }
 
 // With implements Histogram.
@@ -147,7 +132,7 @@ type Histogram struct {
 // and returns a usable Histogram object.
 func NewHistogramFrom(opts prometheus.HistogramOpts, labelNames []string) *Histogram {
 	hv := prometheus.NewHistogramVec(opts, labelNames)
-	prometheus.MustRegister(hv)
+	prometheus.Register(hv)
 	return NewHistogram(hv)
 }
 
@@ -156,11 +141,6 @@ func NewHistogram(hv *prometheus.HistogramVec) *Histogram {
 	return &Histogram{
 		hv: hv,
 	}
-}
-
-// Delete unregisters the Prometheus HistorgramVec
-func (h *Histogram) Delete() bool {
-	return prometheus.Unregister(h.hv)
 }
 
 // With implements Histogram.

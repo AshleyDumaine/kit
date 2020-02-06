@@ -213,3 +213,23 @@ func TestInconsistentLabelCardinality(t *testing.T) {
 		"a", "1", "b", "2", "c", "KABOOM!",
 	).Add(123)
 }
+
+func TestReRegister(t *testing.T) {
+    defer func() {
+        x := recover()
+        if x != nil {
+            t.Fatal("expected no panic, got one")
+        }
+    }()
+
+    gaugeOpts := stdprometheus.GaugeOpts{
+        Namespace: "test",
+        Subsystem: "duplicate_reg_test",
+        Name:      "foo",
+        Help:      "This is a different help string.",
+    }
+    labelNames := []string{"foo"}
+
+    gauge := NewGaugeFrom(gaugeOpts, labelNames)
+    gauge = NewGaugeFrom(gaugeOpts, labelNames)
+}
