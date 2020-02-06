@@ -21,7 +21,11 @@ type Counter struct {
 // and returns a usable Counter object.
 func NewCounterFrom(opts prometheus.CounterOpts, labelNames []string) *Counter {
 	cv := prometheus.NewCounterVec(opts, labelNames)
-	prometheus.Register(cv)
+	if err := prometheus.Register(cv); err != nil {
+		if are, ok := err.(prometheus.AlreadyRegisteredError); ok {
+			cv = are.ExistingCollector.(prometheus.Counter)
+		}
+	}
 	return NewCounter(cv)
 }
 
@@ -55,7 +59,11 @@ type Gauge struct {
 // and returns a usable Gauge object.
 func NewGaugeFrom(opts prometheus.GaugeOpts, labelNames []string) *Gauge {
 	gv := prometheus.NewGaugeVec(opts, labelNames)
-	prometheus.Register(gv)
+	if err := prometheus.Register(gv); err != nil {
+		if are, ok := err.(prometheus.AlreadyRegisteredError); ok {
+			gv = are.ExistingCollector.(prometheus.Gauge)
+		}
+	}
 	return NewGauge(gv)
 }
 
@@ -96,7 +104,11 @@ type Summary struct {
 // and returns a usable Summary object.
 func NewSummaryFrom(opts prometheus.SummaryOpts, labelNames []string) *Summary {
 	sv := prometheus.NewSummaryVec(opts, labelNames)
-	prometheus.Register(sv)
+	if err := prometheus.Register(sv); err != nil {
+		if are, ok := err.(prometheus.AlreadyRegisteredError); ok {
+			sv = are.ExistingCollector.(prometheus.Summary)
+		}
+	}
 	return NewSummary(sv)
 }
 
@@ -132,7 +144,11 @@ type Histogram struct {
 // and returns a usable Histogram object.
 func NewHistogramFrom(opts prometheus.HistogramOpts, labelNames []string) *Histogram {
 	hv := prometheus.NewHistogramVec(opts, labelNames)
-	prometheus.Register(hv)
+	if err := prometheus.Register(hv); err != nil {
+		if are, ok := err.(prometheus.AlreadyRegisteredError); ok {
+			hv = are.ExistingCollector.(prometheus.Histogram)
+		}
+	}
 	return NewHistogram(hv)
 }
 
